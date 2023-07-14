@@ -32,7 +32,231 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+nav {
+  padding: 2px;
+  border-radius: 4px;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3vw;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: rgb(137, 135, 135);
+  box-shadow: 2px 2px 2px 4px rgb(214, 213, 213);
+  border-radius: 4px;
+}
+
+
+.modebtn-Container {
+  height: 0px;
+  width: 80px;
+  position: relative;
+  bottom: 57px;
+  float: right;
+  right: 6px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 49px;
+  height: 19px;
+  height: 19px;
+  bottom: 34px;
+  right: 58px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked+.slider {
+  background-color: #2196f3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* Alert msg */
+.alertmsg {
+  padding: 7px;
+  background-color: rgb(188, 255, 196);
+  color: green;
+  border: 2px solid rgb(186, 255, 194);
+  box-shadow: 2px 2px 2px 2px rgb(188, 255, 196);
+}
+
+/* form heading */
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+textarea {
+  width: 64vw;
+  height: 25vh;
+  border-radius: 10px;
+  border: 2px solid #c0b8b8cc;
+  cursor: pointer;
+  padding: 1vw;
+}
+
+textarea:hover {
+  background-color: #fffcfc;
+  box-shadow: 2px 2px 2px 4px rgb(214, 213, 213);
+  border: 2px solid rgb(163, 45, 45);
+}
+
+ /* upper, Lower, Clear, copy, remove space button container */
+.btn-Container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 67vw;
+  padding: 15px;
+  margin-left: 19vw;
+  gap: 2vw;
+}
+
+.btn {
+  width: 153px;
+  border-radius: 7px;
+  padding: 6px;
+  background-color: #021a28;
+  color: white;
+  border: 2px solid rgb(0, 91, 248);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #6f8d6f;
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  margin-left: 19vw;
+  margin-bottom: 1vw;
+  padding: 1vw;
+}
+
+
+.textInfo {
+  margin-top: -1vw;
+}
+
+.textInfoPreview {
+  margin-top: 1vw;
+}
+
+/* utility classes */
+
+/* Ligth Theme */
+.ligthTheme {
+  background-color: rgb(236, 232, 232);
+}
+
+.darkTheme {
+  background-color: rgb(53, 51, 51);
+}
+
+
+
+@media screen and (max-width: 591px) {
+  h1 {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .modeText {
+    font-size: 0px;
+  }
+
+  .switch {
+    bottom: 2px;
+    top: 22px;
+    right: -31px;
+  }
+}
+
+@media screen and (max-width: 254px) {
+  .switch {
+    display: none;
   }
 }
